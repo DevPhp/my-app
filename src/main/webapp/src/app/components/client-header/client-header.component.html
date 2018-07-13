@@ -1,0 +1,23 @@
+<!--header-->
+<div class="header clearfix">
+    <div class="container">
+        <div class="logo">
+            <img src="./assets/images/logo.png">
+        </div>
+        <ul class="maintopmenu">
+            <li>
+                <a  [routerLink]="['/']" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" class="mat-button" mat-button>My Dashboard</a>
+            </li>
+            <li>
+                <a routerLink="/fees-rates" routerLinkActive="active" class="mat-button" mat-button>Fees & Rates</a>
+            </li>
+            <li>
+                <a routerLink="/stop-loss" routerLinkActive="active" class="mat-button" mat-button>Stop Loss</a>
+            </li>
+            <li>
+                <a routerLink="/historical-claims" routerLinkActive="active" class="mat-button" mat-button>Historical Claims Data</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--header-->

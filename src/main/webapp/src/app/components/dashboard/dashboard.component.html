@@ -1,0 +1,67 @@
+<!-- Header menu -->
+<app-header></app-header>
+<!-- Header menu -->
+<div class="container">
+    <div class="text-center" style="margin-top: 60px">
+        <h2>Welcome  Back Katherine!</h2>
+        <p>{{ today | date: 'MMM dd, yyyy' }}</p>
+    </div>
+    <div class="tabel-responsive table-height400 mt-3 clearfix">
+        <div class="input-group mb-3 mt-4" style="width: 300px">
+            <input type="text" class="form-control" placeholder="Client Name or Account #" [(ngModel)]="filter">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button">Search</button>
+            </div>
+        </div>
+                
+        <table class="table themeheader text-center table-striped">
+            <thead>
+            <tr>
+                <th (click)="sort('name')"> 
+                    Client Name 
+                    <span class="glyphicon sort-icon" *ngIf="key =='name'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                </th>
+                <th (click)="sort('account')"> 
+                    Account# 
+                    <span class="glyphicon sort-icon" *ngIf="key =='account'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                </th>
+                <th (click)="sort('employee')"> 
+                    Employee 
+                    <span class="glyphicon sort-icon" *ngIf="key =='employee'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                </th>
+                <th (click)="sort('members')"> 
+                    Members 
+                    <span class="glyphicon sort-icon" *ngIf="key =='members'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                </th>
+                <th (click)="sort('renewaldate')"> 
+                    Renewal Date 
+                    <span class="glyphicon sort-icon" *ngIf="key =='renewaldate'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                </th>
+                <th (click)="sort('agency')"> 
+                    Agency 
+                    <span class="glyphicon sort-icon" *ngIf="key =='agency'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                </th>
+                <th (click)="sort('clientmanager')"> 
+                    Client Manager 
+                    <span class="glyphicon sort-icon" *ngIf="key =='clientmanager'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                </th>
+            </tr>
+            </thead>
+            <tbody *ngIf="clientData.length>0">
+                <tr *ngFor="let client of clientData | orderBy: key : reverse | filter:filter | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
+                    <td><a routerLink="/client-dashboard/{{client.id}}"> {{ client.clientName }} </a></td>
+                    <td> {{ client.accountNo }} </td>
+                    <td> {{ client.employees }} </td>
+                    <td> {{ client.members }} </td>
+                    <td> {{ client.renewalDate }} </td>
+                    <td> {{ client.agency }} </td>
+                    <td> {{ client.clientManager }} </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right">
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+        <button (click)="add_client()" class="btn  btn-outline-primary">+Add New Client</button>
+    </div>
+</div>

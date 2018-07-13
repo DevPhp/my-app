@@ -1,0 +1,20 @@
+<!--header-->
+<div class="header clearfix">
+    <div class="container">
+        <div class="logo">
+            <img src="./assets/images/logo.png">
+        </div>
+        <ul class="maintopmenu">
+            <li>
+                <a routerLink="/user-management" routerLinkActive="active" class="mat-button" mat-button>User management</a>
+            </li>
+            <li>
+                <a  [routerLink]="['/']" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" class="mat-button" mat-button>My Dashboard</a>
+            </li>
+            <li>
+                <a routerLink="/" routerLinkActive="active" class="logoutbtn" mat-button>Logout</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--header-->

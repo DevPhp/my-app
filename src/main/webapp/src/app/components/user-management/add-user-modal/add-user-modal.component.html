@@ -1,0 +1,79 @@
+<div class="ngbModal add-new-client">
+  <div class="modal-header">
+    <h5 class="modal-title text-bold">Add a new user</h5>
+    <button type="button" class="close" aria-label="Close" (click)="close()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body" id="print-table">
+    <form id="createuserForm" [formGroup]='userForm' novalidate style="font-size:14px;">
+
+      <div class="row form-group" [ngClass]="{ 'has-danger': userForm.get('userName').invalid && (userForm.get('userName').dirty || userForm.get('userName').touched), 'has-success': userForm.get('userName').valid && (userForm.get('userName').dirty
+                    || userForm.get('userName').touched) }">
+        <label class="col-md-4 col-form-label">User Name: *</label>
+        <div class="col-md-8">
+          <input class="form-control Name" type="text" formControlName='userName'>
+          <div *ngIf="userForm.get('userName').invalid && (userForm.get('userName').dirty || isSubmitted)" class="text-danger">
+            <div *ngIf="userForm.get('userName').errors">
+              User Name is required.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row form-group" [ngClass]="{ 'has-danger': userForm.get('permissionStatus').invalid && (userForm.get('permissionStatus').dirty || userForm.get('permissionStatus').touched), 'has-success': userForm.get('permissionStatus').valid && (userForm.get('permissionStatus').dirty || userForm.get('permissionStatus').touched) }">
+        <label class="col-md-4 col-form-label" style="white-space:nowrap;">Permission Status: *</label>
+        <div class="col-md-8">
+          
+                    <select formControlName='permissionStatus' class="custom-select">
+                      <option value="Administrator">Administrator</option>
+                      <option value="Subscriber">Subscriber</option>
+                    </select>
+          <div *ngIf="userForm.get('permissionStatus').invalid && (userForm.get('permissionStatus').dirty || isSubmitted)" class="text-danger">
+            <div *ngIf="userForm.get('permissionStatus').errors">
+              Permission Status is required.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row form-group" [ngClass]="{ 'has-danger': userForm.get('agency').invalid && (userForm.get('agency').dirty || userForm.get('agency').touched), 'has-success': userForm.get('agency').valid && (userForm.get('agency').dirty || userForm.get('agency').touched) }">
+        <label class="col-md-4  col-form-label">Agency: *</label>
+        <div class="col-md-8">
+          <input class="form-control Name" type="text" formControlName='agency'>
+          <div *ngIf="userForm.get('agency').invalid && (userForm.get('agency').dirty || isSubmitted)" class="text-danger">
+            <div *ngIf="userForm.get('agency').errors">
+              Agency Name is required.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row form-group" [ngClass]="{ 'has-danger': userForm.get('accountStatus').invalid && (userForm.get('accountStatus').dirty || userForm.get('accountStatus').touched), 'has-success': userForm.get('accountStatus').valid && (userForm.get('accountStatus').dirty || userForm.get('accountStatus').touched) }">
+        <label class="col-md-4 col-form-label">Account Status: *</label>
+        <div class="col-md-8">
+          <select formControlName='accountStatus' class="custom-select">
+            <option value="Active">Active</option>
+            <option value="InActive">InActive</option>
+          </select>
+          <div *ngIf="userForm.get('accountStatus').invalid && (userForm.get('accountStatus').dirty || isSubmitted)" class="text-danger">
+            <div *ngIf="userForm.get('accountStatus').errors">
+              Account Status is required.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </form>
+
+
+
+
+
+
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn btn-success btn-sm" data-dismiss="modal" style="margin-bottom: 0px;" (click)="addUser()"> Submit</button>
+    <button class="btn btn-primary btn-sm" data-dismiss="modal" (click)="close()">Close</button>
+  </div>

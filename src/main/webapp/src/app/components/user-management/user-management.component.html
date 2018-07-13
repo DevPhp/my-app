@@ -1,0 +1,56 @@
+<!-- Header menu -->
+<app-header></app-header>
+<!-- Header menu -->
+<div class="container">
+    <h3 class="mt-4">User Management</h3>
+    <div class="tabel-responsive table-height400 mt-3 clearfix">
+        <div class="input-group mb-3 mt-4" style="width: 300px">
+            <input type="text" class="form-control " placeholder="User Name" [(ngModel)]="filter">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button">Search</button>
+            </div>
+        </div>
+        <table class="table themeheader text-center table-striped ">
+            <thead>
+            <tr>
+                <th (click)="sort('username')"> 
+                    User Name
+                    <span class="glyphicon sort-icon" *ngIf="key =='username'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                </th>
+                <th (click)="sort('permission')"> 
+                    Permission Status
+                    <span class="glyphicon sort-icon" *ngIf="key =='permission'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                </th>
+                <th (click)="sort('clientassigned')"> 
+                    Clients Assigned
+                    <span class="glyphicon sort-icon" *ngIf="key =='clientassigned'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                </th>
+                <th (click)="sort('agency')"> 
+                    Agency
+                    <span class="glyphicon sort-icon" *ngIf="key =='agency'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                </th>
+                <th (click)="sort('accountstatus')"> 
+                    Account Status
+                    <span class="glyphicon sort-icon" *ngIf="key =='accountstatus'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                </th>
+            </tr>
+            </thead>
+            <tbody *ngIf="usersData.length>0">
+                <tr *ngFor="let users of usersData | orderBy: key : reverse | filter:filter | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
+                    <td> {{ users.userName }} </td>
+                    <td> {{ users.permissionStatus }} </td>
+                    <td> {{ users.clientAssigned }} </td>
+                    <td> {{ users.agency }} </td>
+                    <td> {{ users.accountStatus }} </td>
+                    
+                </tr>
+            </tbody>
+          
+        </table>
+        <div class="text-right">
+              <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+        <button (click)="adduser()" class="btn  btn-outline-primary mr-2">+Add User</button>
+        <button class="btn btn-primary">Save</button>
+    </div>
+</div>

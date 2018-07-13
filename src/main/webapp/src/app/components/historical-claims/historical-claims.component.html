@@ -1,0 +1,469 @@
+<!-- Header menu -->
+<app-client-header></app-client-header>
+<!-- Header menu -->
+<div class="container">
+    <h3 class="mt-4">Historical Claims Data Capture</h3>
+<div class="form-inline">
+    <select class="custom-select-sm custom-select">
+        <option>Plan Year</option>
+    </select>
+</div>
+<div class="clearfix mb-3 mt-4 row">
+    <div class="col-auto">
+    <a href="#" class="btn btn-success ">Save</a>
+    <a href="#" class="btn btn-primary"> +Add Month </a>
+    <a href="#" class="btn btn-danger">  -Delete Month </a>
+    </div>
+    <div class="col-auto ml-auto">
+    <a href="feesRates.html" class="btn btn-success mr-2"> Download Data - (CSV File)</a>
+    </div>
+</div>
+<!--table group row-->
+    <div class="table-responsive clearfix table-height400 d-flex " style="margin-top: 20px;">
+        <div>
+            <h6> PPO Plan</h6>
+            <table class="table themeheader table-sm claim_ppo_wd_adj table-striped">
+                <thead class="vetical-middle text-center">
+                <tr>
+                    <th>Month</th>
+                    <th> EE Only</th>
+                    <th> EE + Spouse</th>
+                    <th> EE + Child</th>
+                    <th> EE + Family</th>
+                    <th> Employee</th>
+                    <th>  Members</th>
+                    <th>  Medical PPO</th>
+                    <th>  Rx Claims</th>
+                    <th class="lt-blue-bg">  Gross Claims</th>
+                    <th>  ISL Reimbursements</th>
+                    <th> Rx Rebates</th>
+                    <th class="lt-blue-bg"> Net Claims</th>
+                </tr>
+                </thead>
+                <tbody class="text-center">
+                <tr>
+                   <td> Jan-18</td>
+                    <td> 100</td>
+                    <td> 25</td>
+                    <td>  15</td>
+                    <td>  54</td>
+                    <td> 194</td>
+                    <td>  341</td>
+                    <td> <div class="val_ltrt">$ <span class="float-right">97,000.00</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">27,160.00</span></div></td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">124,160</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">250000.00</span></div></td>
+                    <td> <div class="val_ltrt">$ <span class="float-right">17000.00</span></div></td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">82160.00</span></div></td>
+                </tr>
+                <tr>
+                    <td> Jan-18</td>
+                    <td> 100</td>
+                    <td> 25</td>
+                    <td>  15</td>
+                    <td>  54</td>
+                    <td> 194</td>
+                    <td>  341</td>
+                    <td> <div class="val_ltrt">$ <span class="float-right">97,000.00</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">27,160.00</span></div></td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">124,160</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">250000.00</span></div></td>
+                    <td> <div class="val_ltrt">$ <span class="float-right">17000.00</span></div></td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">82160.00</span></div></td>
+                </tr>
+                <tr>
+                    <td> Jan-18</td>
+                    <td> 100</td>
+                    <td> 25</td>
+                    <td>  15</td>
+                    <td>  54</td>
+                    <td> 194</td>
+                    <td>  341</td>
+                    <td> <div class="val_ltrt">$ <span class="float-right">97,000.00</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">27,160.00</span></div></td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">124,160</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">250000.00</span></div></td>
+                    <td> <div class="val_ltrt">$ <span class="float-right">17000.00</span></div></td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">82160.00</span></div></td>
+                </tr>
+                <tr class="tab-btm-total">
+                    <td class="textb">YTD Total</td>
+                    <td> </td>
+                    <td> </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td> 194</td>
+                    <td>  341</td>
+                    <td> <div class="val_ltrt">$ <span class="float-right">97,000.00</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">27,160.00</span></div></td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">124,160</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">250000.00</span></div></td>
+                    <td> <div class="val_ltrt">$ <span class="float-right">17000.00</span></div></td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">82160.00</span></div></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="margin-left:40px">
+            <h6>PEPM Costs</h6>
+            <table class="table themeheader table-sm table-striped pepm-tab-width-adj">
+                <thead class="vetical-middle text-center">
+                <tr>
+                    <th>Fixed Fees</th>
+                    <th>  Medical</th>
+                    <th>  Rx</th>
+                    <th>  Total</th>
+                </tr>
+                </thead>
+                <tbody class="text-center">
+                <tr>
+                    <td> &nbsp;</td>
+                    <td><div class="val_ltrt">$ <span class="float-right">500.00</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">103.27</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">603.27</span></div></td>
+                </tr>
+                <tr>
+                    <td> &nbsp;</td>
+                    <td><div class="val_ltrt">$ <span class="float-right">500.00</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">103.27</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">603.27</span></div></td>
+                </tr>
+                <tr>
+                    <td> &nbsp;</td>
+                    <td><div class="val_ltrt">$ <span class="float-right">500.00</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">103.27</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">603.27</span></div></td>
+                </tr>
+                <tr class="tab-btm-total">
+                    <td> <div class="val_ltrt">$ <span class="float-right">500.00</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">500.00</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">103.27</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">603.27</span></div></td>
+                </tr>
+                </tbody>
+                </table>
+        </div>
+    </div>
+<!--table group row-->
+    <!--table group row-->
+    <div class="table-responsive clearfix table-height400 d-flex " style="margin-top: 50px;">
+        <div>
+            <h6> HSA Plan</h6>
+            <table class="table themeheader table-sm claim_ppo_wd_adj table-striped">
+                <thead class="vetical-middle text-center">
+                <tr>
+                    <th>Month</th>
+                    <th> EE Only</th>
+                    <th> EE + Spouse</th>
+                    <th> EE + Child</th>
+                    <th> EE + Family</th>
+                    <th> Employee</th>
+                    <th>  Members</th>
+                    <th>  Medical PPO</th>
+                    <th>  Rx Claims</th>
+                    <th class="lt-blue-bg">  Gross Claims</th>
+                    <th>  ISL Reimbursements</th>
+                    <th> Rx Rebates</th>
+                    <th class="lt-blue-bg"> Net Claims</th>
+                </tr>
+                </thead>
+                <tbody class="text-center">
+                <tr>
+                    <td> Jan-18</td>
+                    <td> 100</td>
+                    <td> 25</td>
+                    <td>  15</td>
+                    <td>  54</td>
+                    <td> 194</td>
+                    <td>  341</td>
+                    <td> <div class="val_ltrt">$ <span class="float-right">97,000.00</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">27,160.00</span></div></td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">124,160</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">250000.00</span></div></td>
+                    <td> <div class="val_ltrt">$ <span class="float-right">17000.00</span></div></td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">82160.00</span></div></td>
+                </tr>
+                <tr>
+                    <td> Jan-18</td>
+                    <td> 100</td>
+                    <td> 25</td>
+                    <td>  15</td>
+                    <td>  54</td>
+                    <td> 194</td>
+                    <td>  341</td>
+                    <td> <div class="val_ltrt">$ <span class="float-right">97,000.00</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">27,160.00</span></div></td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">124,160</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">250000.00</span></div></td>
+                    <td> <div class="val_ltrt">$ <span class="float-right">17000.00</span></div></td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">82160.00</span></div></td>
+                </tr>
+                <tr>
+                    <td> Jan-18</td>
+                    <td> 100</td>
+                    <td> 25</td>
+                    <td>  15</td>
+                    <td>  54</td>
+                    <td> 194</td>
+                    <td>  341</td>
+                    <td> <div class="val_ltrt">$ <span class="float-right">97,000.00</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">27,160.00</span></div></td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">124,160</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">250000.00</span></div></td>
+                    <td> <div class="val_ltrt">$ <span class="float-right">17000.00</span></div></td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">82160.00</span></div></td>
+                </tr>
+                <tr class="tab-btm-total">
+                    <td class="textb">YTD Total</td>
+                    <td> </td>
+                    <td> </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td> 194</td>
+                    <td>  341</td>
+                    <td> <div class="val_ltrt">$ <span class="float-right">97,000.00</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">27,160.00</span></div></td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">124,160</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">250000.00</span></div></td>
+                    <td> <div class="val_ltrt">$ <span class="float-right">17000.00</span></div></td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">82160.00</span></div></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="margin-left:40px">
+            <h6>PEPM Costs</h6>
+            <table class="table themeheader table-sm table-striped pepm-tab-width-adj">
+                <thead class="vetical-middle text-center">
+                <tr>
+                    <th>Fixed Fees</th>
+                    <th>  Medical</th>
+                    <th>  Rx</th>
+                    <th>  Total</th>
+                </tr>
+                </thead>
+                <tbody class="text-center">
+                <tr>
+                    <td> &nbsp;</td>
+                    <td><div class="val_ltrt">$ <span class="float-right">500.00</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">103.27</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">603.27</span></div></td>
+                </tr>
+                <tr>
+                    <td> &nbsp;</td>
+                    <td><div class="val_ltrt">$ <span class="float-right">500.00</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">103.27</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">603.27</span></div></td>
+                </tr>
+                <tr>
+                    <td> &nbsp;</td>
+                    <td><div class="val_ltrt">$ <span class="float-right">500.00</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">103.27</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">603.27</span></div></td>
+                </tr>
+                <tr class="tab-btm-total">
+                    <td> <div class="val_ltrt">$ <span class="float-right">500.00</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">500.00</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">103.27</span></div></td>
+                    <td><div class="val_ltrt">$ <span class="float-right">603.27</span></div></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--table group row-->
+<!--dental table group-->
+    <div class="table-responsive clearfix  table-height400 d-flex " style="margin-top: 50px;">
+        <div>
+            <h6> Dental</h6>
+            <table class="table themeheader dental-tab-width-adj table-sm table-striped">
+                <thead class="vetical-middle text-center">
+                <tr>
+                    <th>Month</th>
+                    <th> EE Only</th>
+                    <th> EE+Spouse</th>
+                    <th> EE+Child</th>
+                    <th> EE+Family</th>
+                    <th> Employee</th>
+                    <th> Members</th>
+                    <th class="lt-blue-bg">Claims</th>
+                </tr>
+                </thead>
+                <tbody class="text-center">
+                <tr>
+                    <td> Jan-18</td>
+                    <td>   200</td>
+                    <td>   50</td>
+                    <td>   46</td>
+                    <td>   107</td>
+                    <td>  403</td>
+                    <td>   709</td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">20,553.00</span></div></td>
+               </tr>
+                <tr>
+                    <td> Jan-18</td>
+                    <td>   200</td>
+                    <td>   50</td>
+                    <td>   46</td>
+                    <td>   107</td>
+                    <td>  403</td>
+                    <td>   709</td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">20,553.00</span></div></td>
+                </tr>
+                <tr>
+                    <td> Jan-18</td>
+                    <td>   200</td>
+                    <td>   50</td>
+                    <td>   46</td>
+                    <td>   107</td>
+                    <td>  403</td>
+                    <td>   709</td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">20,553.00</span></div></td>
+                </tr>
+                <tr class="tab-btm-total">
+                    <td> YTD Total</td>
+                    <td>   200</td>
+                    <td>   50</td>
+                    <td>   46</td>
+                    <td>   107</td>
+                    <td>  403</td>
+                    <td>   709</td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">20,553.00</span></div></td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+        <div style="margin-left:40px">
+            <h6> PEPM Costs</h6>
+            <table class="table themeheader dental-tab-width-adj table-sm table-striped">
+                <thead class="vetical-middle text-center">
+                <tr>
+                    <th>Fixed Fees</th>
+                    <th>  Dental Claims</th>
+                    <th class="lt-blue-bg"> Total PEPM Cost</th>
+                </tr>
+                </thead>
+                <tbody class="text-center">
+                <tr>
+                    <td><div class="val_ltrt">$ <span class="float-right">-</span></div></td>
+                    <td> <div class="val_ltrt">$ <span class="float-right">51.00</span></div></td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">51.00</span></div></td>
+                </tr>
+                <tr>
+                    <td><div class="val_ltrt">$ <span class="float-right">-</span></div></td>
+                    <td> <div class="val_ltrt">$ <span class="float-right">51.00</span></div></td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">51.00</span></div></td>
+                </tr>
+                <tr>
+                    <td><div class="val_ltrt">$ <span class="float-right">-</span></div></td>
+                    <td> <div class="val_ltrt">$ <span class="float-right">51.00</span></div></td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">51.00</span></div></td>
+                </tr>
+                <tr class="tab-btm-total">
+                    <td><div class="val_ltrt">$ <span class="float-right">-</span></div></td>
+                    <td> <div class="val_ltrt">$ <span class="float-right">51.00</span></div></td>
+                    <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">51.00</span></div></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+     </div>
+<!--dental table group-->
+<!--vision table group-->
+<div class="table-responsive clearfix  table-height400 d-flex " style="margin-top: 50px;">
+    <div>
+        <h6> Vision</h6>
+        <table class="table themeheader dental-tab-width-adj table-sm table-striped">
+            <thead class="vetical-middle text-center">
+            <tr>
+                <th>Month</th>
+                <th> EE Only</th>
+                <th> EE+Spouse</th>
+                <th> EE+Child</th>
+                <th> EE+Family</th>
+                <th> Employee</th>
+                <th> Members</th>
+                <th class="lt-blue-bg">Claims</th>
+            </tr>
+            </thead>
+            <tbody class="text-center">
+            <tr>
+                <td> Jan-18</td>
+                <td>   200</td>
+                <td>   50</td>
+                <td>   46</td>
+                <td>   107</td>
+                <td>  403</td>
+                <td>   709</td>
+                <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">20,553.00</span></div></td>
+            </tr>
+            <tr>
+                <td> Jan-18</td>
+                <td>   200</td>
+                <td>   50</td>
+                <td>   46</td>
+                <td>   107</td>
+                <td>  403</td>
+                <td>   709</td>
+                <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">20,553.00</span></div></td>
+            </tr>
+            <tr>
+                <td> Jan-18</td>
+                <td>   200</td>
+                <td>   50</td>
+                <td>   46</td>
+                <td>   107</td>
+                <td>  403</td>
+                <td>   709</td>
+                <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">20,553.00</span></div></td>
+            </tr>
+            <tr class="tab-btm-total">
+                <td> YTD Total</td>
+                <td>   200</td>
+                <td>   50</td>
+                <td>   46</td>
+                <td>   107</td>
+                <td>  403</td>
+                <td>   709</td>
+                <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">20,553.00</span></div></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div style="margin-left:40px">
+        <h6> PEPM Costs</h6>
+        <table class="table themeheader dental-tab-width-adj table-sm table-striped">
+            <thead class="vetical-middle text-center">
+            <tr>
+                <th>Fixed Fees</th>
+                <th>  Dental Claims</th>
+                <th class="lt-blue-bg"> Total PEPM Cost</th>
+            </tr>
+            </thead>
+            <tbody class="text-center">
+            <tr>
+                <td><div class="val_ltrt">$ <span class="float-right">-</span></div></td>
+                <td> <div class="val_ltrt">$ <span class="float-right">51.00</span></div></td>
+                <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">51.00</span></div></td>
+            </tr>
+            <tr>
+                <td><div class="val_ltrt">$ <span class="float-right">-</span></div></td>
+                <td> <div class="val_ltrt">$ <span class="float-right">51.00</span></div></td>
+                <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">51.00</span></div></td>
+            </tr>
+            <tr>
+                <td><div class="val_ltrt">$ <span class="float-right">-</span></div></td>
+                <td> <div class="val_ltrt">$ <span class="float-right">51.00</span></div></td>
+                <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">51.00</span></div></td>
+            </tr>
+            <tr class="tab-btm-total">
+                <td><div class="val_ltrt">$ <span class="float-right">-</span></div></td>
+                <td> <div class="val_ltrt">$ <span class="float-right">51.00</span></div></td>
+                <td class="lt-blue-bg"><div class="val_ltrt">$ <span class="float-right">51.00</span></div></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!--vision table group-->
+</div>

@@ -1,0 +1,117 @@
+
+
+
+<div class="ngbModal add-new-client">
+  <div class="modal-header">
+    <h5 class="modal-title text-bold text-center">Add a new client</h5>
+    <button type="button" class="close" aria-label="Close" (click)="close()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body" id="print-table">
+    <form id="createClientForm" [formGroup]='clientForm' novalidate style="font-size:14px;">
+
+      <div class="row form-group" [ngClass]="{ 'has-danger': clientForm.get('clientName').invalid && (clientForm.get('clientName').dirty || clientForm.get('clientName').touched), 'has-success': clientForm.get('clientName').valid && (clientForm.get('clientName').dirty
+                    || clientForm.get('clientName').touched) }">
+        <label   class="col-md-4  col-form-label">Client Name: *</label>
+        <div class="col-md-8">
+          <input class="form-control Name" type="text" formControlName='clientName'>
+          <div *ngIf="clientForm.get('clientName').invalid && (clientForm.get('clientName').dirty || isSubmitted)" class="text-danger">
+            <div *ngIf="clientForm.get('clientName').errors">
+              Client Name is required.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row form-group" [ngClass]="{ 'has-danger': clientForm.get('accountNo').invalid && (clientForm.get('accountNo').dirty || clientForm.get('accountNo').touched), 'has-success': clientForm.get('accountNo').valid && (clientForm.get('accountNo').dirty || clientForm.get('accountNo').touched) }">
+        <label   class="col-md-4 col-form-label">Account Number: *</label>
+        <div class="col-md-8">
+          <input class="form-control Name" (keypress)="numberOnly($event)" type="text" formControlName='accountNo'>
+          <div *ngIf="clientForm.get('accountNo').invalid && (clientForm.get('accountNo').dirty || isSubmitted)" class="text-danger">
+            <div *ngIf="clientForm.get('accountNo').errors">
+              Account Number is required.
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+          <div class="row form-group" [ngClass]="{ 'has-danger': clientForm.get('employees').invalid && (clientForm.get('employees').dirty || clientForm.get('employees').touched), 'has-success': clientForm.get('employees').valid && (clientForm.get('employees').dirty || clientForm.get('employees').touched) }">
+            <label   class="col-md-4  col-form-label">Employees: *</label>
+            <div class="col-md-8">
+              <input class="form-control Name" (keypress)="numberOnly($event)" type="text" formControlName='employees' >
+              <div *ngIf="clientForm.get('employees').invalid && (clientForm.get('employees').dirty || isSubmitted)" class="text-danger">
+                <div *ngIf="clientForm.get('employees').errors">
+                  Employees are required.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row form-group" [ngClass]="{ 'has-danger': clientForm.get('members').invalid && (clientForm.get('members').dirty || clientForm.get('members').touched), 'has-success': clientForm.get('members').valid && (clientForm.get('members').dirty || clientForm.get('members').touched) }">
+            <label   class="col-md-4 col-form-label">Members: *</label>
+            <div class="col-md-8">
+              <input class="form-control Name" (keypress)="numberOnly($event)" type="text" formControlName='members'>
+              <div *ngIf="clientForm.get('members').invalid && (clientForm.get('members').dirty || isSubmitted)" class="text-danger">
+                <div *ngIf="clientForm.get('members').errors">
+                  Members are required.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row form-group" [ngClass]="{ 'has-danger': clientForm.get('renewalDate').invalid && (clientForm.get('renewalDate').dirty || clientForm.get('renewalDate').touched), 'has-success': clientForm.get('renewalDate').valid && (clientForm.get('renewalDate').dirty || clientForm.get('renewalDate').touched) }">
+            <label   class="col-md-4 col-form-label">Renewal Date: *</label>
+            <div class="col-md-8">
+              <input class="form-control Name" type="date" formControlName='renewalDate'>
+                      <div *ngIf="clientForm.get('renewalDate').invalid && (clientForm.get('renewalDate').dirty || isSubmitted)" class="text-danger">
+                        <div *ngIf="clientForm.get('renewalDate').errors">
+                          Renewel Date is required.
+                        </div>
+                      </div>
+            </div>
+          </div>
+
+        <div class="row form-group" [ngClass]="{ 'has-danger': clientForm.get('agency').invalid && (clientForm.get('agency').dirty || clientForm.get('agency').touched), 'has-success': clientForm.get('agency').valid && (clientForm.get('agency').dirty || clientForm.get('agency').touched) }">
+          <label  class="col-md-4 col-form-label">Agency: *</label>
+          <div class="col-md-8">
+            <select formControlName='agency' class="custom-select">
+              <option value="Russ Blakely & Associates">Russ Blakely & Associates</option>
+              <option value="Trinity Benefit Advisors">Trinity Benefit Advisors</option>
+            </select>
+            <div *ngIf="clientForm.get('agency').invalid && (clientForm.get('agency').dirty || isSubmitted)" class="text-danger">
+              <div *ngIf="clientForm.get('agency').errors">
+                Agency Name is required.
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="row form-group" [ngClass]="{ 'has-danger': clientForm.get('clientManager').invalid && (clientForm.get('clientManager').dirty || clientForm.get('clientManager').touched), 'has-success': clientForm.get('clientManager').valid && (clientForm.get('clientManager').dirty || clientForm.get('clientManager').touched) }">
+          <label  class="col-md-4 col-form-label">Client Manager: *</label>
+          <div class="col-md-8">
+            <select formControlName='clientManager' class="custom-select">
+              <option value="Amy Sullivan">Amy Sullivan</option>
+              <option value="Katherine Mayfield">Katherine Mayfield</option>
+            </select>
+            <div *ngIf="clientForm.get('clientManager').invalid && (clientForm.get('clientManager').dirty || isSubmitted)" class="text-danger">
+              <div *ngIf="clientForm.get('clientManager').errors">
+                Client manager is required.
+              </div>
+            </div>
+          </div>
+        </div>
+     
+    </form>
+
+
+
+
+
+
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn btn-success btn-sm" data-dismiss="modal" style="margin-bottom: 0px;" (click)="addClient()"> Submit</button>
+    <button class="btn btn-primary btn-sm" data-dismiss="modal" (click)="close()">Close</button>
+  </div>
